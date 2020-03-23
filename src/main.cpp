@@ -10,13 +10,7 @@ int main() {
     int matrix[10][20];
     initMatrix(matrix);
     setMatrix(matrix);
-
-    while (key != 'q') {
-        key = _getch();
-        if (key == 's') {
-            drawMatrix(matrix);
-        }
-    }
+    printMatrix(matrix);
 
     return 0;
 }
