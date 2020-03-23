@@ -6,7 +6,7 @@
 
 
 int main() {
-    char key = NULL;
+    char key = ' ';
     int matrix[10][20];
     initMatrix(matrix);
     setMatrix(matrix);

@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\mingw64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "C:\\Users\\larsi\\source\\repos\\Tetris1\\Tetris1\\src/Blocks.cpp",
+                "C:\\Users\\larsi\\source\\repos\\Tetris1\\Tetris1/src/matrix_manipulation.cpp",
+                "C:\\Users\\larsi\\source\\repos\\Tetris1\\Tetris1/src/main.cpp",
+                "-o",
+                "C:\\Users\\larsi\\source\\repos\\Tetris1\\Tetris1\\bin\\Tetris1.exe",
+                "-IC:\\Users\\larsi\\source\\repos\\Tetris1\\Tetris1/include"
+            ],
+            "options": {
+                "cwd": "C:\\mingw64\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
