@@ -1,10 +1,10 @@
 #include <iostream>
 #include <Windows.h>
 
-void setPrintMatrix();
 void printMatrix(int matrix[][20]);
 void drawMatrix(int matrix[][20]);
 void setMatrix(int matrix[][20]);
+void initMatrix(int matrix[][20]);
 
 void gotoxy(int x, int y)
 {
@@ -39,23 +39,25 @@ void drawMatrix(int matrix[][20]) {
     }
 }
 
-
-void setMatrix(int matrix[][20]) {
-    for (int i = 1; i < 10; i++) {
+void initMatrix(int matrix[][20]) {
+    for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 20; j++) {
-
-            if (matrix[i - 1][j] == 0) {
-                matrix[i][j] = 1;
-            }
-            else {
-                matrix[i][j] = 0;
-            }
+            matrix[i][j] = 0;
         }
     }
 }
 
-void setPrintMatrix() {
-    int matrix[10][20];
-    setMatrix(matrix);
-    drawMatrix(matrix);
+
+void setMatrix(int matrix[][20]) {
+
+    int sel = 0;
+    
+    // generate random number between 0 and 1 and insert in array
+    for (int i = 1; i < 10; i++) {
+        for (int j = 0; j < 20; j++) {
+            sel = rand() % 2;
+
+            matrix[i][j] = sel;
+        }
+    }
 }

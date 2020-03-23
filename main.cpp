@@ -7,11 +7,14 @@
 
 int main() {
     char key = NULL;
+    int matrix[10][20];
+    initMatrix(matrix);
+    setMatrix(matrix);
 
     while (key != 'q') {
         key = _getch();
         if (key == 's') {
-            setPrintMatrix();
+            drawMatrix(matrix);
         }
     }
 
