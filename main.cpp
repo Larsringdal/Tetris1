@@ -22,7 +22,7 @@ int main() {
 }
 
 int getUserInput() { //returns 0 for no input, 1 for a (rotate left), 2 for d (rotate right)
-
+    return 0;
     
 
 }
