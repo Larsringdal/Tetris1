@@ -14,7 +14,7 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void printMatrix(int matrix[][20]) {
+void printMatrix(int matrix[][20]) { //prints matrix (for visual purposes only)
     for (int i = 1; i < 10; i++) {
         for (int j = 0; j < 20; j++) {
             if (j == 19) {
@@ -29,7 +29,7 @@ void printMatrix(int matrix[][20]) {
 
 }
 
-void drawMatrix(int matrix[][20]) {
+void drawMatrix(int matrix[][20]) { //Draws # if there is a 1, and an empty space if there is nothing
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 20; j++) {
             if (matrix[i][j] != 0) {
@@ -45,7 +45,7 @@ void drawMatrix(int matrix[][20]) {
     }
 }
 
-void initMatrix(int matrix[][20]) {
+void initMatrix(int matrix[][20]) { //initializes game matrix with 0
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 20; j++) {
             matrix[i][j] = 0;
@@ -54,7 +54,7 @@ void initMatrix(int matrix[][20]) {
 }
 
 
-void setMatrix(int matrix[][20]) {
+void setMatrix(int matrix[][20]) { //puts either 1 or 2 in matrix
 
     int sel = 0;
     
