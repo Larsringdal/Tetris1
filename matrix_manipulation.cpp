@@ -21,7 +21,7 @@ void printMatrix(int matrix[][20]) {
                 std::cout << matrix[i][j] << "\n";
             }
             else {
-                std::cout << matrix[i][j] << " " <<"";
+                std::cout << matrix[i][j] << " ";
             }
 
         }
