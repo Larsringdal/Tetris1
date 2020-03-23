@@ -32,9 +32,15 @@ void printMatrix(int matrix[][20]) {
 void drawMatrix(int matrix[][20]) {
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 20; j++) {
-            if (matrix[i][j] != 0)
+            if (matrix[i][j] != 0) {
                 gotoxy(i, j);
-            std::cout << "#";
+                std::cout << "#";
+            }
+            else {
+                gotoxy(i, j);
+                std::cout << " ";
+            }
+                
         }
     }
 }

@@ -6,14 +6,6 @@
 #include "Blocks.h"
 
 
-void gotoxy(int x, int y)
-{
-	COORD coord;
-	coord.X = x;
-	coord.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-
-}
 void blockSelect(int type, int orientation, int matrix[][30], int x, int y)
 {
 	// Printing Square-Block
@@ -47,36 +39,7 @@ void blockSelect(int type, int orientation, int matrix[][30], int x, int y)
 
 	else {};
 }
-void printMatrix(int matrix[][30], int x, int y)
-{
-	int i = NULL;
-	int j = NULL;
 
-	for (i = 0; i <= 30 - x; i++) {
-		for (j = 0; j <= 30 - y; j++) {
-			if (matrix[i][j] == 1) {
-				gotoxy(i,j);
-				printf("#");
-			}
-			else {}
-		}
-	}
-}
-void initMatrix(int matrix[][30])
-{
-
-	//Initialises the matrix with 0 instead of NULL. 
-
-	int i = NULL;
-	int j = NULL;
-
-	for (i = 0; i <= 30; i++) {
-		for (j = 0; j <= 30; j++) {
-			matrix[i][j] = 0;
-		}
-	}
-
-}
 void SquareDraw(int matrix[][30], int orientation, int x, int y)
 {
 	// Draws The Square block with only one orientation (doesn't change with rotation)
